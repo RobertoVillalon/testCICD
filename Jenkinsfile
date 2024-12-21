@@ -21,20 +21,20 @@ pipeline {
 
         stage('Construir Aplicación') {
             steps {
-                sh './mvnw clean package -DskipTests=true'
+                bat './mvnw clean package -DskipTests=true'
             }
         }
 
         stage('Construir Imagen Docker') {
             steps {
-                sh 'docker build -t ${DOCKER_IMAGE} .'
+                bat 'docker build -t ${DOCKER_IMAGE} .'
             }
         }
 
         stage('Desplegar en Docker Local') {
             steps {
                 script {
-                    sh """
+                    bat """
                     # Detener y eliminar el contenedor existente si está en ejecución
                     docker stop ${CONTAINER_NAME} || true
                     docker rm ${CONTAINER_NAME} || true
