@@ -11,7 +11,7 @@ public class MiController {
     @GetMapping
     public String testFunction(){
 
-        return "Esta es una funcion de prueba";
+        return "Esta es una funcion que cambiara en el despliegue automatico";
     }
 
 }
