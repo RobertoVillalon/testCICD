@@ -27,7 +27,7 @@ pipeline {
 
         stage('Construir Imagen Docker') {
             steps {
-                bat 'docker build -t ${DOCKER_IMAGE} .'
+                bat "docker build -t  ${DOCKER_IMAGE}"
             }
         }
 
@@ -35,7 +35,6 @@ pipeline {
             steps {
                 script {
                     bat """
-                    # Detener y eliminar el contenedor existente si está en ejecución
                     docker stop ${CONTAINER_NAME} || true
                     docker rm ${CONTAINER_NAME} || true
 
