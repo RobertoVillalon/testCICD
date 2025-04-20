@@ -11,7 +11,7 @@
   </parent>
 
   <groupId>cl.beto</groupId>
-  <artifactId>miApp</artifactId>
+  <artifactId>miapp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>miApp</name>
   <description>Demo project for Spring Boot</description>
